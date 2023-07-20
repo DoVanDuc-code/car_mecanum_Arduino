@@ -421,8 +421,7 @@ set:
       Serial.println(change);
       if(change > 155 && change <= 255)
       {
-        int i = 100;
-        backWard(i);
+        backWard(80);
         change = 0;
         }
       if(change < 155 && change >= 0)
@@ -433,7 +432,7 @@ set:
       ps2x.read_gamepad();
       valRy = ps2x.Analog(PSS_RY);
       if (valRy >= 127) goto set;
-      delay(300);
+      delay(50);
     }
 // Di tien cham
     if (valRy > 127)
@@ -443,8 +442,7 @@ set:
       Serial.println(change);
       if(change > 155 && change <= 255)
       {
-        int i = 100;
-        forWard(i);
+        forWard(80);
         change = 0;       
         }
       if (change < 155 && change >= 0)
@@ -455,7 +453,7 @@ set:
       ps2x.read_gamepad();
       valRy = ps2x.Analog(PSS_RY);
       if (valRy <= 127)  goto set;
-      delay(300);
+      delay(50);
     }
 // di ngang phai
       if (valRx > 128)
@@ -465,8 +463,7 @@ set:
         Serial.println(change);
         if(change > 155 && change <= 255)
         {
-          int i = 80;
-          ngangRight(i);
+          ngangRight(80);
           change = 0;
         }
         if (change < 155 && change >= 0)
@@ -477,7 +474,7 @@ set:
         ps2x.read_gamepad ();
         valRx = ps2x.Analog (PSS_RX);
         if (valRx <= 128)  goto set;
-        delay (300);
+        delay (50);
       }
 //// Di ngang trai
       if (valRx < 128)
@@ -487,8 +484,7 @@ set:
         Serial.println(change);
         if (change > 155 && change <= 255)
         {
-          int i = 80;
-          ngangLeft(i);
+          ngangLeft(80);
           change = 0;
           }
         if (change < 155 && change >= 0)
@@ -499,7 +495,7 @@ set:
         ps2x. read_gamepad();
         valRx = ps2x. Analog(PSS_RX);
         if (valRx >= 128) goto set;
-        delay (300);
+        delay (50);
         }
 //////////////////////////  Nut joystick bên trai   ////////////////
 // Di lui
@@ -510,8 +506,7 @@ set:
       Serial.println(change);
       if(change > 155 && change <= 255)
       {
-        int i = 200;
-        backWard(i);
+        backWard(150);
         change = 0;
         }
       if(change < 155 && change >= 0)
@@ -522,7 +517,7 @@ set:
       ps2x.read_gamepad();
       valLy = ps2x.Analog(PSS_LY);
       if (valLy >= 127) goto set;
-      delay(300);
+      delay(50);
     }
 // Di tien cham
     if (valLy > 127)
@@ -532,8 +527,7 @@ set:
       Serial.println(change);
       if(change > 155 && change <= 255)
       {
-        int i = 200;
-        forWard(i);
+        forWard(150);
         change = 0;       
         }
       if (change < 155 && change >= 0)
@@ -544,7 +538,7 @@ set:
       ps2x.read_gamepad();
       valLy = ps2x.Analog(PSS_LY);
       if (valRy <= 127)  goto set;
-      delay(300);
+      delay(50);
     }
 // di ngang phai
       if (valLx > 128)
@@ -554,8 +548,7 @@ set:
         Serial.println(change);
         if(change > 155 && change <= 255)
         {
-          int i = 120;
-          ngangRight(i);
+          ngangRight(120);
           change = 0;
         }
         if (change < 155 && change >= 0)
@@ -566,7 +559,7 @@ set:
         ps2x.read_gamepad ();
         valLx = ps2x.Analog (PSS_LX);
         if (valLx <= 128)  goto set;
-        delay (300);
+        delay (50);
       }
 //// Di ngang trai
       if (valLx < 128)
@@ -576,8 +569,7 @@ set:
         Serial.println(change);
         if (change > 155 && change <= 255)
         {
-          int i = 120;
-          ngangLeft(i);
+          ngangLeft(120);
           change = 0;
           }
         if (change < 155 && change >= 0)
@@ -588,7 +580,7 @@ set:
         ps2x. read_gamepad();
         valLx = ps2x. Analog(PSS_LX);
         if (valLx >= 128) goto set;
-        delay (300);
+        delay (50);
         }
         goCross ();
         if (a == 1) cheotrentrai(100);
